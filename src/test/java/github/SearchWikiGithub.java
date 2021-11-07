@@ -13,13 +13,13 @@ import static com.codeborne.selenide.Selenide.open;
 public class SearchWikiGithub {
 
     @BeforeAll
-    static void beforeAll(){
+    static void beforeAll() {
         Configuration.startMaximized = true;
 
     }
 
     @Test
-            void searchSoftAssertions () {
+    void searchSoftAssertions() {
 
         open("https://github.com/selenide/selenide");
         $("#wiki-tab").click();

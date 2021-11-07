@@ -9,13 +9,13 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class DragDrop {
     @BeforeAll
-    static void beforeAll(){
+    static void beforeAll() {
         Configuration.startMaximized = true;
 
     }
+
     @Test
-    void DragAndDropAct ()
-    {
+    void dragAndDropAct() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDropTo($("#column-b"));
         $("#column-a header").shouldHave(text("B"));
